@@ -1,8 +1,10 @@
 import styles from "./Icon.module.css"
+import {SocialLinks} from "@/data/companyLinks";
 
-export const Icon = () => {
+export const Icon = ({name, link}: SocialLinks) => {
     return (
-        <div className={styles.icon}>
-        </div>
+        <a href={link} target="_blank" className={styles.icon}>
+            {name}
+        </a>
     )
 }

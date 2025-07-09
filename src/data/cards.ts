@@ -7,8 +7,8 @@ export type CardType = {
 export const cards: CardType[] = [
     {
         name: "Wishlist",
-        link: "",
-        description: "https://store.steampowered.com/app/3544900/Davy_Jones_Deckhand/"
+        link: "https://store.steampowered.com/app/3544900/Davy_Jones_Deckhand/",
+        description: ""
     },
     {
         name: "Playtest",

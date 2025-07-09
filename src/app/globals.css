@@ -12,3 +12,11 @@
   padding: var(--spacing-md);
 }
 
+html {
+  font-family: --font-lexend-sans, serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
