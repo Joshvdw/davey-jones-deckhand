@@ -1,5 +1,11 @@
-import styles from './Card.module.css';
+import styles from "./Card.module.css"
 
+export const Card = () => {
+    return (
+        <div className={styles.card}>
+        </div>
+    )
+}
 
 
 // function Card({ title, subtitle, variant = 'primary', footer, children }) {
