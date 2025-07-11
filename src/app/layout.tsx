@@ -7,7 +7,9 @@ import "./globals.css";
 const lexendSans = Lexend({
     variable: "--font-lexend-sans",
     subsets: ["latin"],
+    display: "swap",
 });
+
 
 export const metadata: Metadata = {
     title: "Davey Jones' Deckhand",

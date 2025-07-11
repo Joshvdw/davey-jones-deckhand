@@ -12,13 +12,15 @@
 /*  padding: var(--spacing-md);*/
 /*}*/
 
-body {
-    margin: 0;
+:root {
+    --font-lexend-sans: sans-serif; /* fallback for Webstorm */
 }
 
-html {
-    font-family: --font-lexend-sans, serif;
+body {
+    margin: 0;
+    font-family: var(--font-lexend-sans), serif;
 }
+
 
 a {
     color: inherit;
