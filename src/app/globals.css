@@ -1,22 +1,26 @@
 /* VARIABLE EXAMPLE */
-:root {
-  --primary-color: #0070f3;
-  --font-size-base: 16px;
-  --spacing-md: 1rem;
-}
+/*:root {*/
+/*  --primary-color: #0070f3;*/
+/*  --font-size-base: 16px;*/
+/*  --spacing-md: 1rem;*/
+/*}*/
 
-/*noinspection ALL*/
-.div {
-  background-color: var(--primary-color);
-  font-size: var(--font-size-base);
-  padding: var(--spacing-md);
+/*!*noinspection ALL*!*/
+/*.div {*/
+/*  background-color: var(--primary-color);*/
+/*  font-size: var(--font-size-base);*/
+/*  padding: var(--spacing-md);*/
+/*}*/
+
+body {
+    margin: 0;
 }
 
 html {
-  font-family: --font-lexend-sans, serif;
+    font-family: --font-lexend-sans, serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
