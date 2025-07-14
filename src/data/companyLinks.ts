@@ -15,19 +15,19 @@ export const email: Email = {
 
 export const socialLinks: SocialLinks[] = [
     {
-        name: "twitter",
+        name: "x",
         link: "https://x.com/CassBayGames",
     },
     {
-        name: "BSKY",
+        name: "bsky",
         link: "https://bsky.app/profile/cassbaygames.bsky.social"
     },
     {
-        name: "Instagram",
+        name: "instagram",
         link: "https://www.instagram.com/cassbaygames/",
     },
     {
-        name: "Linkedin",
+        name: "linkedin",
         link: "https://www.linkedin.com/company/cass-bay-games",
     }
 ]
