@@ -1,5 +1,7 @@
 .logoWrapper {
     width: 20vw;
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
