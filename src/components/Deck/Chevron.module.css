@@ -1,0 +1,10 @@
+.chevron {
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .chevron {
+        height: 36px;
+        width: 36px;
+    }
+}
