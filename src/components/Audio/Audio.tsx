@@ -14,10 +14,10 @@ export const Audio = () => {
             hoverSound2,
             hoverSound3
         ]);
-        reduceVolume("bgMusic", 0.2);
-        reduceVolume("hoverSound1", 0.2);
-        reduceVolume("hoverSound2", 0.2);
-        reduceVolume("hoverSound3", 0.2);
+        reduceVolume("bgMusic", 0.3);
+        reduceVolume("hoverSound1", 0.3);
+        reduceVolume("hoverSound2", 0.3);
+        reduceVolume("hoverSound3", 0.3);
     }, []);
 
     return (

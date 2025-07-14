@@ -1,9 +1,21 @@
 .icon {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: opacity 0.3s ease-in-out;
-    height: 24px;
+    height: 32px;
+    width: 32px;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .icon:hover {
     opacity: 1;
+}
+
+@media (max-width: 1080px) {
+    .icon {
+        opacity: 1;
+    }
 }

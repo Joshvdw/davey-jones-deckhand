@@ -8,10 +8,18 @@
     background-color: #232021;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    opacity: 0.6;
-    transition: opacity 0.3s ease-in-out;
+    opacity: 0.9;
+    transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .emailWrapper:hover {
     opacity: 1;
+    color: #232021;
+    background-color: #ecece8;
+}
+
+@media (max-width: 1080px) {
+    .emailWrapper {
+        opacity: 1;
+    }
 }
