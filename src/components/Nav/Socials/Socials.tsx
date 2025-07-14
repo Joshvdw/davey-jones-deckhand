@@ -4,7 +4,7 @@ import {Icon} from "@/components/Nav/Socials/Icon";
 
 export const Socials = () => {
     return (
-        <div className={styles.socials}>
+        <div className={styles.socialsWrapper}>
             {socialLinks.map((link, i) => (
                 <Icon key={i} {...link}/>
             ))}
