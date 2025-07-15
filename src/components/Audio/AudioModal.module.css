@@ -1,5 +1,5 @@
 .audioModalWrapper {
-    height: 100vh;
+    height: 100svh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     align-items: center;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 3;
+    z-index: 4;
 }
 
 .audioModal {
@@ -35,7 +35,7 @@
     padding: 1rem 2rem;
     border: #ecece8 2px solid;
     border-radius: 0.5rem;
-    cursor: pointer;
+    cursor: url('../../../public/icons/Custom_Cursor_32x32.png'), auto;
 
     h2 {
         margin: 0;

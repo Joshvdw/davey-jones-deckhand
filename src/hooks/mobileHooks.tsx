@@ -1,5 +1,6 @@
-import {useState, useEffect} from "react";
+"use client"
 
+import {useState, useEffect} from "react";
 
 export const useIsSmallScreen = () => {
     const [isSmall, setIsSmall] = useState(true);

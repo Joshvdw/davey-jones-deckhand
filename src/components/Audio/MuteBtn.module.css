@@ -1,0 +1,16 @@
+.muteBtn {
+    position: fixed;
+    z-index: 3;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 24px;
+    height: 24px;
+    cursor: url('../../../public/icons/Custom_Cursor_32x32.png'), auto;
+
+    svg {
+        transform: scale(10.2) !important;
+        transform-origin: center;
+        pointer-events: none;
+        opacity: 0.8;
+    }
+}

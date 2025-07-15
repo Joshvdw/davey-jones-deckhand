@@ -41,7 +41,7 @@
 @media (max-width: 1080px) {
     .card {
         width: 60vw;
-        height: 66.66vw;
+        height: 83.33vw;
         display: flex;
         justify-content: center;
     }
@@ -56,12 +56,12 @@
     }
 
     .title {
-        margin-top: 6.5vw;
-        font-size: 5vw;
+        margin-top: 8.5vw;
+        font-size: 5.5vw;
     }
 
     .description {
-        margin-bottom: 6.5vw;
+        margin-bottom: 8.5vw;
         font-size: 4.5vw;
     }
 }
@@ -69,7 +69,7 @@
 @media (max-width: 600px) {
     .card {
         width: 70vw;
-        height: 77.77vw;
+        height: 97.21vw;
     }
 
     .content {
@@ -77,12 +77,12 @@
     }
 
     .title {
-        margin-top: 7.75vw;
-        font-size: 5.5vw;
+        margin-top: 10.25vw;
+        font-size: 6.5vw;
     }
 
     .description {
-        margin-bottom: 7vw;
+        margin-bottom: 9vw;
         font-size: 5vw;
     }
 }
