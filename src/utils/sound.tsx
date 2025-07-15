@@ -55,34 +55,6 @@ function unMuteSounds() {
     muted = false;
 }
 
-// function muteToggle() {
-//     // && !isTouchDevice()
-//     if (!muted) {
-//         // fadeAllSounds(0);
-//         // setTimeout(() => {
-//         muteAllSounds();
-//         // }, 200);
-//     } else {
-//         unMuteAllSounds();
-//         // fadeAllSounds();
-//     }
-//     muted = !muted;
-// }
-//
-// function muteAllSounds() {
-//     const allSounds = Object.keys(sounds);
-//     allSounds.forEach((key) => {
-//         sounds[key].muted = true;
-//     });
-// }
-//
-// function unMuteAllSounds() {
-//     const allSounds = Object.keys(sounds);
-//     allSounds.forEach((key) => {
-//         sounds[key].muted = false;
-//     });
-// }
-
 function isMuted() {
     return muted;
 }
