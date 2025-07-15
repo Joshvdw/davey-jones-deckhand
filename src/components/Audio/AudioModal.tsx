@@ -6,7 +6,6 @@ type AudioModalProps = {
     setHideModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-
 export const AudioModal = ({setHideModal}: AudioModalProps) => {
 
     const handleClick = (wantsSound: boolean) => {
