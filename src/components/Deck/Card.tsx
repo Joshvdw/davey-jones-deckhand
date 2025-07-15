@@ -1,5 +1,5 @@
 import styles from "./Card.module.css"
-import {CardType} from "@/data/cards";
+import {CardType} from "@/types/types";
 import Image from "next/image";
 import {useEffect, useState} from "react";
 import {playSound} from "@/utils/sound";

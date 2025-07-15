@@ -7,56 +7,55 @@ import {useIsSmallScreen} from "@/hooks/mobileHooks";
 import {Chevron} from "@/components/Deck/Chevron";
 import {useState} from "react";
 
+const HELP_TEXT = "Click on the cards to visit the links!";
+
+type MobileDeckProps = {
+    cardCount: number;
+    setCardCount: React.Dispatch<React.SetStateAction<number>>;
+}
+
+const MobileDeck = ({cardCount, setCardCount}: MobileDeckProps) => (
+    <>
+        <div className={styles.deck}>
+            <Chevron
+                isReversed={true}
+                cardCount={cardCount}
+                setCardCount={setCardCount}
+                totalCards={cards.length - 1}
+            />
+            <Card {...cards[cardCount]} />
+            <Chevron
+                isReversed={false}
+                cardCount={cardCount}
+                setCardCount={setCardCount}
+                totalCards={cards.length - 1}
+            />
+        </div>
+        <p className={styles.mobileText}>{HELP_TEXT}</p>
+    </>
+);
+
+const DesktopDeck = () => (
+    <div className={styles.deck}>
+        {cards.map((card, i) => (
+            <Card key={i} {...card} />
+        ))}
+    </div>
+);
+
 export const Deck = () => {
     const [cardCount, setCardCount] = useState(0);
-    // const [showHelpText, setShowHelpText] = useState(true);
-    // const prevCount = useRef(0);
-
-    // optional text delay pop up
-    // useEffect(() => {
-    //     if (prevCount.current !== cardCount)
-    //         setShowHelpText(false);
-    //     prevCount.current = cardCount;
-    //     setTimeout(() => {
-    //         setShowHelpText(true);
-    //     }, 500)
-    // }, [cardCount])
-
     const isMobile: boolean = useIsSmallScreen();
     return (
         <>
             {
                 isMobile ? (
-                    // MOBILE DECK
-                    <>
-                        <div className={styles.deck}>
-                            <Chevron
-                                isReversed={true}
-                                cardCount={cardCount}
-                                setCardCount={setCardCount}
-                                totalCards={cards.length - 1}
-                            />
-                            <Card {...cards[cardCount]}/>
-                            <Chevron
-                                isReversed={false}
-                                cardCount={cardCount}
-                                setCardCount={setCardCount}
-                                totalCards={cards.length - 1}
-                            />
-                        </div>
-                        {/*{showHelpText &&*/}
-                        <p className={styles.mobileText}>Click on the cards to visit the links!</p>
-                        {/*}*/}
-                    </>
+                    <MobileDeck cardCount={cardCount} setCardCount={setCardCount}/>
                 ) : (
-                    // DESKTOP DECK
-                    <div className={styles.deck}>
-                        {cards.map((card, i) => (
-                            <Card key={i} {...card}/>
-                        ))}
-                    </div>
+                    <DesktopDeck/>
                 )
             }
         </>
     )
 }
+
