@@ -1,12 +1,14 @@
 import styles from "./Chevron.module.css"
 import Image from "next/image";
 
-export const Chevron = ({isReversed, cardCount, setCardCount, totalCards}: {
+type ChevronProps = {
     isReversed: boolean,
     cardCount: number,
     setCardCount: React.Dispatch<React.SetStateAction<number>>
     totalCards: number
-}) => {
+}
+
+export const Chevron = ({isReversed, cardCount, setCardCount, totalCards}: ChevronProps) => {
     return (
         <Image
             src={"/icons/chevron.svg"}

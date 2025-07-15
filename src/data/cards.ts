@@ -1,8 +1,4 @@
-export type CardType = {
-    name: string;
-    link: string;
-    description: string;
-}
+import {CardType} from "@/types/types";
 
 export const cards: CardType[] = [
     {

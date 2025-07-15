@@ -1,5 +1,5 @@
 import styles from "./Icon.module.css"
-import {SocialLinks} from "@/data/companyLinks";
+import {SocialLinks} from "@/types/types";
 import Image from "next/image";
 
 export const Icon = ({name, link}: SocialLinks) => {

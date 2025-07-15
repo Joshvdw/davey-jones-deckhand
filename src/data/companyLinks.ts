@@ -1,12 +1,4 @@
-export type SocialLinks = {
-    name: string;
-    link: string;
-}
-
-export type Email = {
-    name: string;
-    link: string;
-}
+import {Email, SocialLinks} from "@/types/types";
 
 export const email: Email = {
     name: "email",
