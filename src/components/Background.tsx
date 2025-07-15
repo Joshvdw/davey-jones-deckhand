@@ -1,3 +1,5 @@
+"use client"
+
 import styles from "./Background.module.css"
 import Image from "next/image";
 import {useIsSmallScreen} from "@/hooks/mobileHooks";

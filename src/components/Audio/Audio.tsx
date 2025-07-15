@@ -1,3 +1,5 @@
+"use client"
+
 import {useEffect, useRef} from "react";
 import {setAudioRefs, reduceVolume} from "@/utils/sound";
 

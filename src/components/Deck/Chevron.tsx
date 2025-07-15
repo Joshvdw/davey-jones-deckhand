@@ -7,7 +7,6 @@ export const Chevron = ({isReversed, cardCount, setCardCount, totalCards}: {
     setCardCount: React.Dispatch<React.SetStateAction<number>>
     totalCards: number
 }) => {
-    console.log(cardCount, totalCards)
     return (
         <Image
             src={"/icons/chevron.svg"}

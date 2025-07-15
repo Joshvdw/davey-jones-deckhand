@@ -1,7 +1,9 @@
+"use client"
+
 import styles from "./Nav.module.css"
 import {Email} from "./Email"
 import {Logo} from "./Logo"
-import {Socials} from "./Socials/Socials"
+import {SocialsWrapper} from "./Socials/SocialsWrapper"
 import {useIsSmallScreen} from "@/hooks/mobileHooks";
 
 export const Nav = () => {
@@ -15,7 +17,7 @@ export const Nav = () => {
                 <Email/>
                 {/*desktop logo*/}
                 {!isMobile && <Logo isModal={false}/>}
-                <Socials/>
+                <SocialsWrapper/>
             </div>
         </>
     )

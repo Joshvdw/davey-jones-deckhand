@@ -1,8 +1,8 @@
-import styles from "./Socials.module.css"
+import styles from "./SocialsWrapper.module.css"
 import {socialLinks} from "@/data/companyLinks";
 import {Icon} from "@/components/Nav/Socials/Icon";
 
-export const Socials = () => {
+export const SocialsWrapper = () => {
     return (
         <div className={styles.socialsWrapper}>
             {socialLinks.map((link, i) => (
