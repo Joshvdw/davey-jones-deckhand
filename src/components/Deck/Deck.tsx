@@ -5,12 +5,12 @@ import {cards} from "@/data/cards";
 import {Card} from "@/components/Deck/Card";
 import {useIsSmallScreen} from "@/hooks/mobileHooks";
 import {Chevron} from "@/components/Deck/Chevron";
-import {useEffect, useRef, useState} from "react";
+import {useState} from "react";
 
 export const Deck = () => {
     const [cardCount, setCardCount] = useState(0);
-    const [showHelpText, setShowHelpText] = useState(true);
-    const prevCount = useRef(0);
+    // const [showHelpText, setShowHelpText] = useState(true);
+    // const prevCount = useRef(0);
 
     // optional text delay pop up
     // useEffect(() => {
@@ -44,9 +44,9 @@ export const Deck = () => {
                                 totalCards={cards.length - 1}
                             />
                         </div>
-                        {showHelpText &&
-                            <p className={styles.mobileText}>Click on the cards to visit the links!</p>
-                        }
+                        {/*{showHelpText &&*/}
+                        <p className={styles.mobileText}>Click on the cards to visit the links!</p>
+                        {/*}*/}
                     </>
                 ) : (
                     // DESKTOP DECK
