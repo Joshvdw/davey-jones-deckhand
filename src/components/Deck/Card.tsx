@@ -1,22 +1,43 @@
 import styles from "./Card.module.css"
 import {CardType} from "@/types/types";
 import Image from "next/image";
-import {useEffect, useState} from "react";
+import {useEffect, useState, useRef} from "react";
 import {playSound} from "@/utils/sound";
-import {getRandomBetween1And3} from "@/utils/utils";
+import {useIsSmallScreen} from "@/hooks/mobileHooks";
 
 export const Card = ({name, link, description}: CardType) => {
     const [hover, setHover] = useState(false)
-    const previous: number = 0;
+
+    const wiggle = useRef<HTMLAnchorElement>(null);
+
+    const isMobile: boolean = useIsSmallScreen();
 
     useEffect(() => {
-        if (hover) {
-            playSound(`hoverSound${getRandomBetween1And3(previous)}`)
+        if (hover && !isMobile) {
+            playSound("hoverSound")
         }
     }, [hover])
 
+    // CARD WIGGLE EFFECT ON MOBILE
+    useEffect(() => {
+        const element = wiggle.current;
+        if (!element) return;
+
+        element.classList.remove(styles.wiggle);
+
+        if (isMobile) {
+            void element.offsetWidth;
+            element.classList.add(styles.wiggle);
+
+            const handle = () => element.classList.remove(styles.wiggle);
+            element.addEventListener("animationend", handle);
+            return () => element.removeEventListener("animationend", handle);
+        }
+    }, [name, isMobile]);
+
+
     const textColor: object = name == "Discord" ? {color: "white"} : {color: "inherit"}
-    const imgPathFormatted: string = `/images/card_${name.toLowerCase().split(' ').join('_')}_1x.webp`
+    const nameFormatted: string = name.toLowerCase().split(' ').join('_')
 
     return (
         <a
@@ -24,9 +45,11 @@ export const Card = ({name, link, description}: CardType) => {
             target="_blank"
             className={`${styles.card}`}
             onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}>
+            onMouseLeave={() => setHover(false)}
+            ref={wiggle}
+        >
             <Image
-                src={`${imgPathFormatted}`}
+                src={`/images/card_${nameFormatted}_1x.webp`}
                 alt={`${name} Playing Card`}
                 width={350}
                 height={486}
@@ -35,7 +58,7 @@ export const Card = ({name, link, description}: CardType) => {
             <div className={styles.content}>
                 <h2 className={styles.title}
                     style={textColor}>{name}</h2>
-                <p className={styles.description}>{description}</p>
+                <p className={`${styles.description} ${styles[`${nameFormatted}Description`]}`}>{description}</p>
             </div>
         </a>
     )

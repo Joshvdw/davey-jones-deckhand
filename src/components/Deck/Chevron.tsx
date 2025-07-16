@@ -1,5 +1,6 @@
 import styles from "./Chevron.module.css"
 import Image from "next/image";
+import {playSound} from "@/utils/sound";
 
 type ChevronProps = {
     isReversed: boolean,
@@ -9,15 +10,22 @@ type ChevronProps = {
 }
 
 export const Chevron = ({isReversed, cardCount, setCardCount, totalCards}: ChevronProps) => {
+
+    const handleClick = () => {
+        playSound("hoverSound1")
+        setCardCount(isReversed ? (cardCount == 0 ? totalCards : cardCount - 1) : (cardCount == totalCards ? 0 : cardCount + 1))
+    }
+
     return (
-        <Image
-            src={"/icons/chevron.svg"}
-            alt={`chevron`}
-            height={64}
-            width={64}
-            className={styles.chevron}
-            style={{transform: isReversed ? "rotate(180deg)" : ""}}
-            onClick={() => setCardCount(isReversed ? (cardCount == 0 ? totalCards : cardCount - 1) : (cardCount == totalCards ? 0 : cardCount + 1))}
-        />
+        <div className={styles.chevronWrapper} onClick={handleClick}>
+            <Image
+                src={"/icons/chevron.svg"}
+                alt={`chevron`}
+                height={64}
+                width={64}
+                className={styles.chevron}
+                style={{transform: isReversed ? "rotate(180deg)" : ""}}
+            />
+        </div>
     )
 }

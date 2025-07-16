@@ -5,7 +5,8 @@
     right: 1.5rem;
     width: 24px;
     height: 24px;
-    cursor: url('../../../public/icons/Custom_Cursor_32x32.png'), auto;
+    cursor: pointer;
+    /*cursor: url('../../../public/icons/Custom_Cursor_32x32.png'), auto;*/
 
     svg {
         transform: scale(10.2) !important;

@@ -38,6 +38,43 @@
     font-size: 1.5vw;
 }
 
+.newsletterDescription, .press_kitDescription {
+    margin-bottom: 2.5vw;
+}
+
+.playtestDescription {
+    margin-bottom: 3vw;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(-5deg);
+    }
+    30% {
+        transform: rotate(5deg);
+    }
+    45% {
+        transform: rotate(-4deg);
+    }
+    60% {
+        transform: rotate(4deg);
+    }
+    75% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.wiggle {
+    animation: wiggle 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    animation-delay: 150ms;
+}
+
 @media (max-width: 1080px) {
     .card {
         width: 60vw;
@@ -64,6 +101,14 @@
         margin-bottom: 8.5vw;
         font-size: 4.5vw;
     }
+
+    .press_kitDescription {
+        margin-bottom: 10.5vw;
+    }
+
+    .newsletterDescription, .playtestDescription {
+        margin-bottom: 12vw;
+    }
 }
 
 @media (max-width: 600px) {
@@ -84,5 +129,17 @@
     .description {
         margin-bottom: 9vw;
         font-size: 5vw;
+    }
+
+    .press_kitDescription {
+        margin-bottom: 12.5vw;
+    }
+
+    .playtestDescription {
+        margin-bottom: 14vw;
+    }
+
+    .newsletterDescription {
+        margin-bottom: 16vw;
     }
 }

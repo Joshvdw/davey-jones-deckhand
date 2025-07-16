@@ -1,4 +1,5 @@
 import {RefObject} from "react";
+import {getRandomBetween1And3} from "@/utils/utils";
 
 const sounds: { [key: string]: HTMLAudioElement } = {};
 const volumes: { [key: string]: number | undefined } = {};
@@ -24,7 +25,12 @@ function storeVolumes() {
 
 function playSound(soundId: string) {
     if (!muted && soundId !== "undefined") {
-        const sound = sounds[soundId];
+        let sound
+        if (soundId == "hoverSound") {
+            sound = sounds[`${soundId}${getRandomBetween1And3(0)}`];
+        } else {
+            sound = sounds[soundId];
+        }
         if (sound) {
             sound.play();
         }

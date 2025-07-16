@@ -12,8 +12,8 @@ const lexendSans = Lexend({
 
 
 export const metadata: Metadata = {
-    title: "Davey Jones' Deckhand",
-    description: "Perfect. Pirate. Parries. Unleash outrageous counter-attack chains in this swashbuckling adventure. Will you break free from Davy Jones' locker?\n",
+    title: "Davy Jones' Deckhand",
+    description: "Unleash outrageous counter-attack chains in this swashbuckling adventure where every voyage is a brutal roguelike deckbuilder. Will you break free from Davy Jones’ locker?",
 };
 
 export default function RootLayout({children,}: Readonly<{
