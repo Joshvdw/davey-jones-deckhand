@@ -1,5 +1,10 @@
-.chevron {
+.chevronWrapper {
     cursor: pointer;
+    height: 60%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 600px) {

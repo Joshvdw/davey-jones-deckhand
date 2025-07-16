@@ -23,6 +23,7 @@
         height: 100svh;
         align-items: center;
         justify-content: space-evenly;
+        overflow: hidden;
     }
 }
 

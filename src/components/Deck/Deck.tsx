@@ -7,7 +7,7 @@ import {useIsSmallScreen} from "@/hooks/mobileHooks";
 import {Chevron} from "@/components/Deck/Chevron";
 import {useState} from "react";
 
-const HELP_TEXT = "Click on the cards to visit the links!";
+// const HELP_TEXT = "Click on the cards to visit the links!";
 
 type MobileDeckProps = {
     cardCount: number;
@@ -31,7 +31,7 @@ const MobileDeck = ({cardCount, setCardCount}: MobileDeckProps) => (
                 totalCards={cards.length - 1}
             />
         </div>
-        <p className={styles.mobileText}>{HELP_TEXT}</p>
+        {/*<p className={styles.mobileText}>{HELP_TEXT}</p>*/}
     </>
 );
 

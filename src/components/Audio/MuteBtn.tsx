@@ -35,7 +35,7 @@ export const MuteBtn = ({hideModal}: { hideModal: boolean }
     useEffect(() => {
         const soundIsMuted = getIsMuted();
 
-        if (soundIsMuted && animationRef.current
+        if (!soundIsMuted && animationRef.current
         ) {
             animationRef.current.goToAndStop(holdFrame, true);
         }
@@ -50,12 +50,10 @@ export const MuteBtn = ({hideModal}: { hideModal: boolean }
         if (getIsMuted()) {
             unMuteSounds();
             playSound("bgMusic");
-            playLottie(holdFrame, endFrame, animationRef.current);
-
+            playLottie(enterFrame, holdFrame, animationRef.current);
         } else {
             muteSounds();
-            playLottie(enterFrame, holdFrame, animationRef.current);
-
+            playLottie(holdFrame, endFrame, animationRef.current);
         }
     };
 

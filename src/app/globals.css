@@ -23,12 +23,14 @@
 body {
     margin: 0;
     font-family: var(--font-lexend-sans), serif;
+    cursor: url('../../public/icons/Custom_Cursor_32x32.png'), auto;
 }
 
 a {
     color: inherit;
     text-decoration: none;
-    cursor: url('../../public/icons/Custom_Cursor_32x32.png'), auto;
+    cursor: pointer;
+    /*cursor: url('../../public/icons/Custom_Cursor_32x32.png'), auto;*/
 
 }
 
