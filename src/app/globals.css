@@ -1,19 +1,5 @@
-/* VARIABLE EXAMPLE */
-/*:root {*/
-/*  --primary-color: #0070f3;*/
-/*  --font-size-base: 16px;*/
-/*  --spacing-md: 1rem;*/
-/*}*/
-
-/*!*noinspection ALL*!*/
-/*.div {*/
-/*  background-color: var(--primary-color);*/
-/*  font-size: var(--font-size-base);*/
-/*  padding: var(--spacing-md);*/
-/*}*/
-
 :root {
-    --font-lexend-sans: sans-serif; /* fallback for Webstorm */
+    --font-lexend-sans: sans-serif;
 }
 
 * {
@@ -24,20 +10,11 @@ body {
     margin: 0;
     font-family: var(--font-lexend-sans), serif;
     cursor: url('../../public/icons/Custom_Cursor_32x32_white.png'), auto;
+    overflow: hidden;
 }
 
 a {
     color: inherit;
     text-decoration: none;
-    cursor: pointer;
     cursor: url('../../public/icons/Custom_Cursor_32x32.png'), auto;
 }
-
-/*.fade-in {*/
-/*    opacity: 0;*/
-/*    transition: opacity 0.6s ease-in-out;*/
-/*}*/
-
-/*.fade-in.visible {*/
-/*    opacity: 1;*/
-/*}*/
