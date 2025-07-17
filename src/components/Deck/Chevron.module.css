@@ -8,11 +8,11 @@
 
 @media (max-width: 600px) {
     .chevronWrapper {
-        width: unset;
+        width: 15vw;
     }
 
     .chevron {
-        height: 48px;
-        width: 48px;
+        height: 8vw;
+        width: 8vw;
     }
 }
