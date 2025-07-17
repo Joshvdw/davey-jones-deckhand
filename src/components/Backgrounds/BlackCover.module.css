@@ -1,0 +1,19 @@
+.blackCover {
+    background-color: black;
+    position: absolute;
+    width: 100vw;
+    height: 100svh;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
+.fadeOut {
+    opacity: 0;
+}

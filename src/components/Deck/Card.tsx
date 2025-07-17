@@ -7,25 +7,22 @@ import {useIsSmallScreen} from "@/hooks/mobileHooks";
 
 export const Card = ({name, link, description}: CardType) => {
     const [hover, setHover] = useState(false)
-    const [isFirstRender, setIsFirstRender] = useState(true)
+    const isFirstRender = useRef(true);
 
     const wiggle = useRef<HTMLAnchorElement>(null);
 
     const isMobile: boolean = useIsSmallScreen();
 
-    useEffect(() => {
-        setIsFirstRender(false)
-    }, []);
 
     useEffect(() => {
         if (hover && !isMobile) {
             playSound("hoverSound")
         }
-    }, [hover])
+    }, [hover, isMobile])
 
     // CARD WIGGLE EFFECT ON MOBILE
     useEffect(() => {
-        if (!isFirstRender) {
+        if (!isFirstRender.current) {
             const element = wiggle.current;
             if (!element) return;
 
@@ -42,6 +39,9 @@ export const Card = ({name, link, description}: CardType) => {
         }
     }, [name, isMobile]);
 
+    useEffect(() => {
+        isFirstRender.current = false;
+    }, []);
 
     const textColor: object = name == "Discord" ? {color: "white"} : {color: "inherit"}
     const nameFormatted: string = name.toLowerCase().split(' ').join('_')
