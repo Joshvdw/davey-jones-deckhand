@@ -22,11 +22,25 @@ const preloadImages = (cards: CardType[]) => {
 };
 
 const MobileDeck = ({cardCount, setCardCount}: MobileDeckProps) => {
+    const [isFading, setIsFading] = useState(false);
+    const [currentCard, setCurrentCard] = useState(cards[0]);
+
     // Mobile Deck Image Preloader
     useEffect(() => {
         preloadImages(cards);
     }, []);
-    return (<>
+
+    useEffect(() => {
+        setIsFading(true);
+        const timeout = setTimeout(() => {
+            setCurrentCard(cards[cardCount]);
+            setIsFading(false);
+        }, 150); // match this with CSS duration
+
+        return () => clearTimeout(timeout);
+    }, [cardCount]);
+    return (
+        <>
             <div className={styles.deck}>
                 <Chevron
                     isReversed={true}
@@ -34,7 +48,9 @@ const MobileDeck = ({cardCount, setCardCount}: MobileDeckProps) => {
                     setCardCount={setCardCount}
                     totalCards={cards.length - 1}
                 />
-                <Card {...cards[cardCount]} />
+                <div className={`${styles.fadeWrapper} ${isFading ? styles.fadeOut : styles.fadeIn}`}>
+                    <Card {...currentCard} />
+                </div>
                 <Chevron
                     isReversed={false}
                     cardCount={cardCount}
