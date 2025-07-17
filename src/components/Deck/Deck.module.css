@@ -31,4 +31,9 @@
     .mobileText {
         display: block;
     }
+
+    .deck {
+        justify-content: space-between;
+        padding: 0 6px;
+    }
 }

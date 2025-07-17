@@ -7,10 +7,15 @@ import {useIsSmallScreen} from "@/hooks/mobileHooks";
 
 export const Card = ({name, link, description}: CardType) => {
     const [hover, setHover] = useState(false)
+    const [isFirstRender, setIsFirstRender] = useState(true)
 
     const wiggle = useRef<HTMLAnchorElement>(null);
 
     const isMobile: boolean = useIsSmallScreen();
+
+    useEffect(() => {
+        setIsFirstRender(false)
+    }, []);
 
     useEffect(() => {
         if (hover && !isMobile) {
@@ -20,18 +25,20 @@ export const Card = ({name, link, description}: CardType) => {
 
     // CARD WIGGLE EFFECT ON MOBILE
     useEffect(() => {
-        const element = wiggle.current;
-        if (!element) return;
+        if (!isFirstRender) {
+            const element = wiggle.current;
+            if (!element) return;
 
-        element.classList.remove(styles.wiggle);
+            element.classList.remove(styles.wiggle);
 
-        if (isMobile) {
-            void element.offsetWidth;
-            element.classList.add(styles.wiggle);
+            if (isMobile) {
+                void element.offsetWidth;
+                element.classList.add(styles.wiggle);
 
-            const handle = () => element.classList.remove(styles.wiggle);
-            element.addEventListener("animationend", handle);
-            return () => element.removeEventListener("animationend", handle);
+                const handle = () => element.classList.remove(styles.wiggle);
+                element.addEventListener("animationend", handle);
+                return () => element.removeEventListener("animationend", handle);
+            }
         }
     }, [name, isMobile]);
 

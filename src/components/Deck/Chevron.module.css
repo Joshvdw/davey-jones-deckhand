@@ -1,5 +1,4 @@
 .chevronWrapper {
-    cursor: pointer;
     height: 60%;
     width: 25%;
     display: flex;
@@ -8,8 +7,12 @@
 }
 
 @media (max-width: 600px) {
+    .chevronWrapper {
+        width: unset;
+    }
+
     .chevron {
-        height: 36px;
-        width: 36px;
+        height: 48px;
+        width: 48px;
     }
 }
