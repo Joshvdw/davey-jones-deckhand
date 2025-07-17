@@ -51,19 +51,19 @@
         transform: rotate(0deg);
     }
     15% {
-        transform: rotate(-5deg);
-    }
-    30% {
-        transform: rotate(5deg);
-    }
-    45% {
         transform: rotate(-4deg);
     }
-    60% {
+    30% {
         transform: rotate(4deg);
     }
+    45% {
+        transform: rotate(-3deg);
+    }
+    60% {
+        transform: rotate(3deg);
+    }
     75% {
-        transform: rotate(-2deg);
+        transform: rotate(-1deg);
     }
     100% {
         transform: rotate(0deg);
@@ -71,8 +71,8 @@
 }
 
 .wiggle {
-    animation: wiggle 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
-    animation-delay: 150ms;
+    animation: wiggle 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    animation-delay: 200ms;
 }
 
 @media (max-width: 1080px) {
@@ -89,7 +89,7 @@
     }
 
     .content {
-        padding: 0 10vw;
+        padding: 0 4vw;
     }
 
     .title {
@@ -98,16 +98,32 @@
     }
 
     .description {
-        margin-bottom: 8.5vw;
+        margin-bottom: 5vw;
         font-size: 4.5vw;
+        color: #000000;
+        background-color: #fff4e0;
+        border-radius: 16px;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+        padding: 1.5rem 2.5rem;
+    }
+
+    .wishlistDescription {
+        background-color: unset;
+        box-shadow: unset;
     }
 
     .press_kitDescription {
-        margin-bottom: 10.5vw;
+        margin-bottom: 8vw;
+
     }
 
-    .newsletterDescription, .playtestDescription {
-        margin-bottom: 12vw;
+    .playtestDescription {
+        margin-bottom: 9.5vw;
+    }
+
+    .newsletterDescription {
+        padding: 1.5rem 2rem;
+        margin-bottom: 11vw;
     }
 }
 
@@ -118,7 +134,7 @@
     }
 
     .content {
-        padding: 0 12vw;
+        padding: 0 7vw;
     }
 
     .title {
@@ -127,19 +143,23 @@
     }
 
     .description {
-        margin-bottom: 9vw;
+        margin-bottom: 5.5vw;
         font-size: 5vw;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
     }
 
     .press_kitDescription {
-        margin-bottom: 12.5vw;
+        margin-bottom: 10vw;
     }
 
     .playtestDescription {
-        margin-bottom: 14vw;
+        margin-bottom: 11vw;
     }
 
     .newsletterDescription {
-        margin-bottom: 16vw;
+        margin-bottom: 12.5vw;
+        padding: 1rem 1.5rem;
     }
 }
