@@ -7,7 +7,7 @@
     padding: 1.5rem;
 }
 
-@media (max-width: 1080px) and (min-height: 500px) {
+@media (max-width: 1080px) {
     .nav {
         padding: 1rem;
         bottom: 0;

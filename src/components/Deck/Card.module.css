@@ -76,10 +76,9 @@
 
 .wiggle {
     animation: wiggle 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-    /*animation-delay: 50ms;*/
 }
 
-@media (max-width: 1080px) and (min-height: 500px) {
+@media (max-width: 1080px) {
     .card {
         width: 60vw;
         height: 83.33vw;
@@ -131,7 +130,7 @@
     }
 }
 
-@media (max-width: 600px) and (min-height: 500px) {
+@media (max-width: 600px) {
     .card {
         width: 70vw;
         height: 97.21vw;

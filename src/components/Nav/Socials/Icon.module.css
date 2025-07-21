@@ -14,7 +14,7 @@
     opacity: 1;
 }
 
-@media (max-width: 1080px) and (min-height: 500px) {
+@media (max-width: 1080px) {
     .icon {
         opacity: 1;
     }
