@@ -52,7 +52,7 @@
     color: #232021;
 }
 
-@media (max-width: 1080px) and (min-height: 500px) {
+@media (max-width: 1080px) {
     .audioModal {
         width: 80%;
         min-width: unset;
@@ -60,7 +60,7 @@
     }
 }
 
-@media (max-width: 600px) and (min-height: 500px) {
+@media (max-width: 600px) {
     .audioModal {
         width: 95%;
         max-width: 30rem;
