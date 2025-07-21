@@ -18,13 +18,13 @@
     background-color: #ecece8;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1080px) and (min-height: 500px) {
     .emailWrapper {
         opacity: 1;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) and (min-height: 500px) {
     .emailWrapper {
         gap: 0.5rem;
         height: 28px;

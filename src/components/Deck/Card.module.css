@@ -79,7 +79,7 @@
     /*animation-delay: 50ms;*/
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1080px) and (min-height: 500px) {
     .card {
         width: 60vw;
         height: 83.33vw;
@@ -131,7 +131,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) and (min-height: 500px) {
     .card {
         width: 70vw;
         height: 97.21vw;

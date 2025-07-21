@@ -1,6 +1,7 @@
+import {JsonLd} from "@/components/JsonLd";
+
 export const dynamic = 'force-static'; // SSG
 
-// import {BlackCoverWrapper} from "@/components/Backgrounds/BlackCoverWrapper";
 import {AudioWrapperModal} from "@/components/Audio/AudioModalWrapper";
 import {Audio} from "@/components/Audio/Audio";
 import styles from "./page.module.css";
@@ -11,7 +12,7 @@ import {Deck} from "@/components/Deck/Deck"
 export default function Home() {
     return (
         <div className={`${styles.page}`}>
-            {/*<BlackCoverWrapper/>*/}
+            <JsonLd/>
             <AudioWrapperModal/>
             <Nav/>
             <Background/>
