@@ -12,13 +12,8 @@ export function JsonLd() {
     };
 
     return (
-        <Script id="json-ld" strategy="beforeInteractive">
-            {`
-                {
-                    "@type": "application/ld+json",
-                    "json": ${JSON.stringify(jsonLd)}
-                }
-            `}
+        <Script id="json-ld" type="application/ld+json" strategy="beforeInteractive">
+            {JSON.stringify(jsonLd)}
         </Script>
     );
 }

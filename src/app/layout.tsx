@@ -15,7 +15,7 @@ const metaDescription: string = "Unleash outrageous counter-attack chains in thi
 const siteUrl: string = "https://cassbaygames.com";
 const ogImage: string = `${siteUrl}/Cass_Bay_Games_website_preview_image.jpg`;
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Davy Jones' Deckhand",
     description: metaDescription,
     metadataBase: new URL(siteUrl),
