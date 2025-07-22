@@ -61,6 +61,7 @@ export const Card = ({name, link, description}: CardType) => {
                 width={350}
                 height={486}
                 className={`${styles.card} ${styles.bgImg}`}
+                priority={true}
             />
             <div className={styles.content}>
                 <h2 className={styles.title}
