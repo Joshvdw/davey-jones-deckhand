@@ -35,7 +35,7 @@ const MobileDeck = ({cardCount, setCardCount}: MobileDeckProps) => {
         const timeout = setTimeout(() => {
             setCurrentCard(cards[cardCount]);
             setIsFading(false);
-        }, 150); // match this with CSS duration
+        }, 300); // match this with CSS duration
 
         return () => clearTimeout(timeout);
     }, [cardCount]);
