@@ -5,7 +5,11 @@ import {useEffect, useState, useRef} from "react";
 import {playSound} from "@/utils/sound";
 import {useIsSmallScreen} from "@/hooks/mobileHooks";
 
-export const Card = ({name, link, description}: CardType) => {
+type CardProps = CardType & {
+    style?: React.CSSProperties;
+};
+
+export const Card = ({name, link, description, style}: CardProps) => {
     const [hover, setHover] = useState(false)
     const isFirstRender = useRef(true);
 
@@ -54,6 +58,7 @@ export const Card = ({name, link, description}: CardType) => {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             ref={wiggle}
+            style={style}
         >
             <Image
                 src={`/images/card_${nameFormatted}_1x.webp`}
