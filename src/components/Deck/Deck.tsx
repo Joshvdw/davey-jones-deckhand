@@ -32,13 +32,17 @@ const MobileDeck = ({cardCount, setCardCount}: MobileDeckProps) => {
 
     useEffect(() => {
         setIsFading(true);
-        const timeout = setTimeout(() => {
+
+        const fadeOutDuration = 200;
+
+        const fadeTimeout = setTimeout(() => {
             setCurrentCard(cards[cardCount]);
             setIsFading(false);
-        }, 300); // match this with CSS duration
+        }, fadeOutDuration);
 
-        return () => clearTimeout(timeout);
+        return () => clearTimeout(fadeTimeout);
     }, [cardCount]);
+
     return (
         <>
             <div className={styles.deck}>
