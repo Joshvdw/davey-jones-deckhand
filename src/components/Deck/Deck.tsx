@@ -39,9 +39,11 @@ const MobileDeck = ({cardCount, setCardCount}: MobileDeckProps) => {
                     <Card
                         key={card.name}
                         {...card}
+                        isActive={i === displayedCardIndex}
                         style={{display: i === displayedCardIndex ? "block" : "none"}}
                     />
                 ))}
+
             </div>
             <Chevron
                 isReversed={false}

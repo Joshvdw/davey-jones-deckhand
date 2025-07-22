@@ -7,9 +7,11 @@ import {useIsSmallScreen} from "@/hooks/mobileHooks";
 
 type CardProps = CardType & {
     style?: React.CSSProperties;
+    isActive?: boolean;
 };
 
-export const Card = ({name, link, description, style}: CardProps) => {
+
+export const Card = ({name, link, description, style, isActive}: CardProps) => {
     const [hover, setHover] = useState(false)
     const isFirstRender = useRef(true);
 
@@ -28,12 +30,12 @@ export const Card = ({name, link, description, style}: CardProps) => {
     useEffect(() => {
         if (!isFirstRender.current) {
             const element = wiggle.current;
-            if (!element) return;
+            if (!element || !isActive) return;
 
             element.classList.remove(styles.wiggle);
 
             if (isMobile) {
-                void element.offsetWidth;
+                void element.offsetWidth; // force reflow
                 element.classList.add(styles.wiggle);
 
                 const handle = () => element.classList.remove(styles.wiggle);
@@ -41,7 +43,8 @@ export const Card = ({name, link, description, style}: CardProps) => {
                 return () => element.removeEventListener("animationend", handle);
             }
         }
-    }, [name, isMobile]);
+    }, [isActive, isMobile]);
+
 
     useEffect(() => {
         isFirstRender.current = false;
