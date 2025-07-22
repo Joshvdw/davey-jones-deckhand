@@ -34,9 +34,8 @@ export const MuteBtn = ({hideModal}: { hideModal: boolean }
 
     useEffect(() => {
         const soundIsMuted = getIsMuted();
-
-        if (!soundIsMuted && animationRef.current
-        ) {
+        console.log(!soundIsMuted)
+        if (!soundIsMuted && animationRef.current && hideModal) {
             animationRef.current.goToAndStop(holdFrame, true);
         }
     }, [hideModal]);

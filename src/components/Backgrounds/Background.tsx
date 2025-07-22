@@ -22,8 +22,9 @@ export const Background = () => {
                 width={1920}
                 height={1080}
                 className={styles.gif}
-                onLoadingComplete={() => setIsBgLoaded(true)}
+                onLoadingComplete={() => setTimeout(() => setIsBgLoaded(true), 250)}
                 priority
+                loading="eager"
             />
         </div>
     );
